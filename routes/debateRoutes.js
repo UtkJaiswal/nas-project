@@ -2,6 +2,12 @@ const express = require('express');
 const router = express.Router();
 const Debate = require('../models/debateModel');
 
+
+router.get('', (req, res) => {
+    res.status(200).json({message:"Server running successfully"})
+})
+
+
 router.post('/get-questions', async (req, res) => {
   try {
     const { standard, subject } = req.body;
